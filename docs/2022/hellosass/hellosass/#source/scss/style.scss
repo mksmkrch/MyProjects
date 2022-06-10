@@ -44,4 +44,10 @@ $color_2:#fff;
 	@include fontz(50px,green);
 	border-bottom: 5px dashed #000;
 	@extend .tplborder;
+	margin: 300px;
 }
+
+.block--2{
+	margin: 30px 0 0 0;
+}
+
