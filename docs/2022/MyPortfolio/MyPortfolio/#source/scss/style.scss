@@ -100,7 +100,6 @@ body{
 .mydog__image{
 	flex: 1 1 33.333%;
 	padding: 0 8px 15px 8px;
-	transition: 2s;
 }
 
 .mydog__image img{
@@ -110,6 +109,7 @@ body{
 }
 
 .mydog__image img:hover{
+	transition: 2s;
 	transform: scale(1.3);
 }
 

@@ -110,7 +110,34 @@ body {
     font-size: 35px;
 }
 
-a{
+
+.button{
+  text-decoration: none;
+  background: #d55a5a;
+  line-height: 60px;
+  padding: 0px 30px;
+  text-transform: uppercase;
+  border-radius: 15px;
+  margin: 0 0 15px 0;
+  color:  #ffe;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+}
+
+.button{
+  transition-property: padding, background-color, font-size;
+  transition-duration: 1s, 0.5s, 1s;
+  transition-delay: 0s;
+  transition-timing-function: cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+
+.button:hover{
+  padding: 0px 50px;
+  background-color: red;
+  font-size: 25px;
+}
+
+/*a{
     margin: 0 0 15px 0px;
     padding: 0 0 0 30px;
     //color: #a2a2c2;
@@ -125,7 +152,7 @@ a:hover{
     color: black;
     background-color: #d55a5a;
     border: 1px solid black;
-}
+}*/
 
 
 
