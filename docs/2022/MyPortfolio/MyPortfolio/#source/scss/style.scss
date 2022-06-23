@@ -24,7 +24,7 @@ body{
 	// background: linear-gradient(to right,  #f6f8f9 0%,#e5ebee 14%,#d7dee3 78%,#f5f7f9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f8f9', endColorstr='#f5f7f9',GradientType=1 ); /* IE6-9 */
 	background: #0f1e2a;
-	padding: 15px 0 30px 0;
+	padding: 15px 0 15px 0;
 }
 .container {
 	max-width: 1180px;
@@ -46,7 +46,7 @@ body{
 	border-radius: 50%;
 	position: relative;
 	left: 0;
-	animation-name: circle, circle_red;
+	animation-name: circle, circle_black;
 	animation-duration: 3s;
 	animation-iteration-count: infinite; 
 	animation-direction: normal;
@@ -58,10 +58,10 @@ body{
 		transform: scale(0.5);
 	}
 	100%{
-		left: 100%;
+		left: 150%;
 	}
 }
-@keyframes circle_red {
+@keyframes circle_black {
 	0%{
 		
 	}
@@ -79,6 +79,7 @@ body{
 	flex: 1 1 auto;
 }
 .header__title {
+	padding-top: 15px;
 	font-size: 60px;
 	margin: 0 0 30px 0;
 	line-height: 1.2;
@@ -102,9 +103,6 @@ body{
 	font-size: 20px;
 	line-height: 36px;
 }
-/* .list li:last-child{
-	margin: 0;
-} */
 
 
 .info {}
@@ -112,15 +110,14 @@ body{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	font-size: 60px;
-	.info__text{
-		padding-top: 30px;
-		font-size: 40px;
-		margin: 0 0 15px 0;
-		text-align: justify;
-		p{margin:0 0 10px 0;}
-	}
-	
+	font-size: 60px;	
+}
+.info__text{
+	padding-top: 30px;
+	font-size: 40px;
+	margin: 0 0 15px 0;
+	text-align: center;
+	p{margin:0 0 10px 0;}
 }
 
 
@@ -199,6 +196,48 @@ body{
 
 .header__image {
 	flex: 0 0 280px;
+}
+}
+
+@media (max-width: 925px ) {
+
+.header__title {
+	text-align: center;
+}
+.list li{
+	font-size: 18px;
+}
+.info__text{
+	font-size: 30px;
+}
+.mydog p{
+	font-size: 50px;
+}
+}
+@media (max-width: 794px ) {
+
+.header__body{
+	overflow: inherit;
+}
+.mydog p{
+	font-size: 45px;
+}
+.mydog__image{
+	flex: 0 1 95%;
+}
+}
+
+@media (max-width: 750px ) {
+
+.header__row{
+	flex-direction: column;
+	.list{
+		display: inline-block;
+		margin: 0 0 0 25px;
+	}
+	.list li{
+		line-height: 1.5em;
+	}
 }
 }
 
