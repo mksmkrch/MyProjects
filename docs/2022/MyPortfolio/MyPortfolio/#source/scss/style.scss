@@ -69,7 +69,7 @@ body{
 		background: black; 
 	}
 }
-.content:hover .header__circle{
+.header:hover .header__circle{
 	animation-play-state:paused;
 }
 .header__body {
@@ -165,6 +165,11 @@ body{
 	animation-timing-function: linear; 
 	//animation-fill-mode: forwards;
 
+	&:hover{
+		animation-play-state:paused;
+		//animation-fill-mode: forwards;
+		//animation-iteration-count: none;
+	}
 	img{
 
 		}
@@ -199,7 +204,7 @@ body{
 }
 }
 
-@media (max-width: 925px ) {
+@media (max-width: 925px ) , (orientation: portrait) {
 
 .header__title {
 	text-align: center;
@@ -214,7 +219,7 @@ body{
 	font-size: 50px;
 }
 }
-@media (max-width: 794px ) {
+@media (max-width: 794px ) , (orientation: portrait) {
 
 .header__body{
 	overflow: inherit;
@@ -227,7 +232,7 @@ body{
 }
 }
 
-@media (max-width: 750px ) {
+@media (max-width: 750px ) , (orientation: portrait) {
 
 .header__row{
 	flex-direction: column;
