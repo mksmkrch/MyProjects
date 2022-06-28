@@ -265,6 +265,11 @@ body {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  z-index: 1;
+}
+
+.mydog__image:hover {
+  z-index: 2;
 }
 
 .mydog__image img {

@@ -140,6 +140,11 @@ body{
 	padding: 0 8px 15px 8px;
 	align-self: center;
 	//margin: 0 auto;
+	z-index: 1;
+}
+
+.mydog__image:hover{
+	z-index: 2;
 }
 
 .mydog__image img{
