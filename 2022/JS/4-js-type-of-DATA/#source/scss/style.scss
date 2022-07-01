@@ -1,0 +1,54 @@
+@import "nullstyle.scss";
+
+body{
+	background-color: #caabcc;
+}
+h1{
+	font-size: 36px;
+	line-height: 1.5em;
+}
+
+.yellow{
+	color: #0ebba0;
+}
+
+.list li{
+	font-size: 24px;
+	line-height: 2em;
+}
+
+.red{
+	color: red;
+	position: relative;
+	display: inline;
+}
+
+ [data-title] {
+	position: relative;  
+}
+[data-title]:after {
+	content: attr(data-title); 
+	position: absolute; 
+	width: 20vw; 
+	bottom: 0;
+	left: 0;
+	background:  rgba(156,55,111,0.95);
+	color: #000; 
+	padding: 0 0 0 0.5em; 
+	opacity: 0; 
+	transition: 1s; 
+	text-align: center;
+	border-radius: 5px;
+} 
+[data-title]:hover:after {
+opacity: 1;
+bottom: 2em; 
+}
+
+.content{
+min-height: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}

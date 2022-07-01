@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/style.css">
+		<title>Переменные JavaScript</title>
+	</head>
+	<body>
+		<div class="content">
+			<h1>
+				Типы данных в 
+				<span class="yellow">JavaScript</span>
+			</h1>
+			<ul class="list">
+				<li>
+					JavaScript - динамически типизированный,
+				т.е. тип данных переменной меняется в момент присвоения либо смены её значения
+				</li>
+				<li>
+					Оператор <span class="red" data-title = "typeof (операнд)">typeof</span> возвращает строку, содержащую информацию о типе операнда
+				</li>
+				<li>
+					Тип <span class="red" data-title = "неопределенный">undefined</span> вернет объявленная неопределенная (без присвоенного значения) переменная .
+				Возвращает тип данных - undefined, значение - indefined
+				</li>
+				<li>
+					Тип <span class="red" data-title = "'пустое место'">null</span> возвращает объявленная определенная переменная, её значением будет - "ничего". Но вот тип у такой переменной - object.
+				Возвращает тип данных - object, значение - null
+				</li>
+				<li>
+					Тип <span class="red" data-title = "true или false">boolean</span> - булевый или логический тип.
+				Возвращает тип данных boolean, значение false\true. 
+				</li>
+				<li>
+					Тип <span class="red" data-title = "число">number</span> числовой тип данных, представляет значения в виде целых чисел и чисел с плавающей точкой.
+				Возвращает тип данных number. 
+				Значения - число.
+				При делении на ноль (let getInfinity = 25 / 0;) - Infinity/-Infinity.
+				При вычислительной ошибке - NaN. Например при let getNan = 'abc' / 10
+				</li>
+				<li>
+					Тип <span class="red" data-title = "очень большие числа">bigint</span>. В JS тип данных number не может содержать числа больше, чем 9007199254740991, или меньше, чем -9007199254740991.
+				</li>
+				<li>
+					Тип <span class="red" data-title = "строка">string</span> возвращает переменная определение в кавычках, любых из трёх видов.
+				</li>
+				<li>
+					Тип <span class="red" data-title = "объект">object</span> используется для хранения коллекций различных значений и более сложных сущностей.
+				</li>
+				<li>
+					Тип <span class="red" data-title = "символ">symbol</span>
+				</li>
+				<li>
+					Тип <span class="red" data-title = "функция">function</span> тот же object 
+				</li>
+			</ul>
+		</div>
+		<script src="js/script.js"></script>
+	</body>
+</html>
