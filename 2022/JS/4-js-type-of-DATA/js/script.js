@@ -55,3 +55,21 @@ function UserInfo(name) {
 
 console.log(new UserInfo('Вася'));
 console.log(new UserInfo('Лена'));
+
+
+
+let users = ['Вася', 'Иван', 'Петя'];
+users.push('Оля');
+console.log(users);
+users.splice(1, 1, 'Петя');
+users.forEach(function (item, index, array){
+	if (item == 'Петя') {
+		users[index] = 'Марина';
+	}
+})
+console.log(users);
+
+
+let removed = users.splice(0, 1);
+console.log(removed);
+console.log(users);
