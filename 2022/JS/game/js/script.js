@@ -1,1 +1,39 @@
-const dino=document.getElementById("dino"),cacto=document.getElementById("cacto");document.addEventListener("keydown",(function(){dino.classList.toggle("jump"),setTimeout((function(){dino.classList.remove("jump")}),300)}));let isAlive=setInterval((function(){let t=parseInt(window.getComputedStyle(dino).getPropertyValue("top")),e=parseInt(window.getComputedStyle(cacto).getPropertyValue("left"));e<50&&e>0&&t>=137.5&&alert("GAME OVER!!!")}),10);
+const dino = document.getElementById('dino');
+const cacto = document.getElementById('cacto');
+//const score = document.getElementsByClassName('game_score');
+
+var scoreInt = 0;
+
+document.addEventListener("keydown", function() {
+	dino.classList.toggle  ('jump');
+	setTimeout( function() {
+		dino.classList.remove('jump');
+	}, 300);
+	});
+document.addEventListener("click", function() {
+	dino.classList.toggle  ('jump');
+	setTimeout( function() {
+		dino.classList.remove('jump');
+	}, 300);
+	});
+
+let isAlive = setInterval ( function(){
+	let dinoBot = parseInt(window.getComputedStyle(dino).getPropertyValue("bottom"));
+	let cactoLeft = parseInt(window.getComputedStyle(cacto).getPropertyValue("left"));
+	//let scoreInt = parseInt(score.innerHTML);
+
+	if (cactoLeft < 40 && cactoLeft > 30 && dinoBot >=0 && dinoBot <= 60) {
+		alert(`GAME OVER!!! \n score: ${scoreInt}`);
+		scoreInt = 0;
+		updateDisplay(scoreInt);
+	}
+	else if (cactoLeft <= 40) {
+		scoreInt++;
+		console.log(scoreInt);
+		updateDisplay(scoreInt);
+	}
+}, 10); 
+
+function updateDisplay(val) {
+	document.querySelector(".game_score").innerHTML = val;
+}

@@ -77,88 +77,150 @@ body {
   background: red;
 }
 
-.game {
-  width: 600px;
+.wrapper {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.game_score {
+  display: inline-block;
+}
+
+.game_items {
+  overflow: hidden;
   height: 200px;
-  border-bottom: 1px solid #000;
-  margin: auto;
+  position: relative;
+}
+
+.game_land {
+  border-top: 1px black solid;
 }
 
 #dino {
+  display: inline-block;
   width: 50px;
   height: 50px;
   background-image: url(../image/dino3.png);
   background-size: 50px 50px;
-  position: relative;
-  top: 155px;
+  position: absolute;
+  bottom: 0;
 }
 
 #cacto {
-  width: 30px;
-  height: 40px;
+  display: inline-block;
+  width: 35px;
+  height: 50px;
   background-image: url(../image/cacto1.png);
   background-size: 30px 40px;
-  position: relative;
-  top: 110px;
-  left: 580px;
-  -webkit-animation: cactoMov 1s infinite linear;
-          animation: cactoMov 1s infinite linear;
+  position: absolute;
+  -webkit-animation: cactoMov 3s infinite linear;
+          animation: cactoMov 3s infinite linear;
+  float: right;
+  bottom: 0;
 }
 
 @-webkit-keyframes cactoMov {
   0% {
-    left: 580px;
+    right: -10%;
   }
   100% {
-    left: -20px;
+    right: 100%;
   }
 }
 
 @keyframes cactoMov {
   0% {
-    left: 580px;
+    right: -10%;
   }
   100% {
-    left: -20px;
+    right: 100%;
   }
 }
 .jump {
-  -webkit-animation: jump 0.4s linear;
-          animation: jump 0.4s linear;
+  -webkit-animation: jump 0.3s ease-out;
+          animation: jump 0.3s ease-out;
 }
 
 @-webkit-keyframes jump {
   0% {
-    top: 155px;
-  }
-  25% {
-    top: 137.5px;
+    bottom: 0;
   }
   50% {
-    top: 75px;
-  }
-  75% {
-    top: 137.5px;
+    bottom: 100px;
   }
   100% {
-    top: 155px;
+    bottom: 0px;
   }
 }
 
 @keyframes jump {
   0% {
-    top: 155px;
-  }
-  25% {
-    top: 137.5px;
+    bottom: 0;
   }
   50% {
-    top: 75px;
-  }
-  75% {
-    top: 137.5px;
+    bottom: 100px;
   }
   100% {
-    top: 155px;
+    bottom: 0px;
+  }
+}
+.footer {
+  background-color: #000;
+  color: #fff;
+}
+
+.footer__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 55px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer_text {
+  font-size: 13px;
+  letter-spacing: 0.3em;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@media (max-width: 925px), (orientation: portrait) {
+  #cacto {
+    -webkit-animation: cactoMov 1s infinite linear;
+            animation: cactoMov 1s infinite linear;
   }
 }
