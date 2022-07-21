@@ -27,12 +27,12 @@ let isAlive = setInterval ( function(){
 		scoreInt = 0;
 		updateDisplay(scoreInt);
 	}
-	else if (cactoLeft <= 40) {
+	else if (cactoLeft == 0) {
 		scoreInt++;
-		console.log(scoreInt);
+		//console.log(scoreInt);
 		updateDisplay(scoreInt);
-	}
-}, 10); 
+	} 
+}, 1); 
 
 function updateDisplay(val) {
 	document.querySelector(".game_score").innerHTML = val;

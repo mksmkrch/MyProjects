@@ -1,0 +1,118 @@
+@import "nullstyle.scss";
+
+.wrapper {
+	//background-color: #00ffee;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	//overflow: hidden;
+}
+
+header {
+	min-height: 50px;
+	background-color: black;
+	text-align: center;
+}
+
+ul li{
+	width: 33.3%;
+	color: white;
+	display: inline-block;
+	
+}
+
+.main{
+	flex: 1 1 auto;
+	display: flex;
+}
+
+
+.container {
+	flex: 1 1 auto;
+	margin: 0 auto;
+	padding: 5px 0px;
+	max-height: 100%;
+	display: flex;
+}
+.main__row {
+	flex: 1 1 auto;
+	display: flex;
+}
+
+.main_block {
+	flex: 0 1 50%;
+	border: solid 1px black;
+	margin: 0 15px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+		.title {
+			text-align: center;
+			font-size: 25px;
+			padding: 10px 0;
+			color: white;
+			background-color: black;
+		}
+}
+
+
+.income {
+	.income__body {
+		display: flex;
+		justify-content:space-around;
+		.income__column {
+			flex: 1 1 33.333%;
+			border: 1px solid black;
+			//margin: 2px;
+			&:last-child{
+				margin: 0 -1px;
+			}
+			&:first-child{
+				margin: 0 -1px;
+			}
+		}
+			.date {}
+			.type {}
+			.summ {}
+	}
+}
+
+.income__body_row{
+	text-align: center;
+	padding: 5px;
+	font-size: 20px;
+	border: 1px solid #000;
+	margin: -1px;
+}
+
+.btn{
+	height: 25px;
+	background-color: #00fefe;
+	color: black;
+	font-size: 15px;
+	border: 1px solid black;
+	margin: -1px;
+}
+
+.expense {
+	.expense__body {}
+}
+
+
+.main_block__body {
+	flex: 1 1 auto;
+	padding: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
