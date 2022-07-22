@@ -1,25 +1,22 @@
 @import "nullstyle.scss";
 
+
 .wrapper {
-	//background-color: #00ffee;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
 	min-height: 100%;
-	//overflow: hidden;
 }
 
 header {
 	min-height: 50px;
 	background-color: black;
 	text-align: center;
-}
-
-ul li{
-	width: 33.3%;
-	color: white;
-	display: inline-block;
-	
+	& li{
+		width: 33.3%;
+		color: white;
+		display: inline-block;
+	}
 }
 
 .main{
@@ -27,88 +24,90 @@ ul li{
 	display: flex;
 }
 
-
 .container {
 	flex: 1 1 auto;
 	margin: 0 auto;
-	padding: 5px 0px;
+	padding: 15px 0px;
 	max-height: 100%;
 	display: flex;
 }
+
 .main__row {
 	flex: 1 1 auto;
 	display: flex;
 }
 
 .main_block {
-	flex: 0 1 50%;
+	overflow: hidden;
+	flex: 1 1 50%;
 	border: solid 1px black;
+	border-radius: 5px;
 	margin: 0 15px;
+	&:first-child{margin-right: 7.5px}
+	&:last-child{margin-left: 7.5px}
 	height: 100%;
 	display: flex;
 	flex-direction: column;
-		.title {
+		.main__title {
 			text-align: center;
 			font-size: 25px;
 			padding: 10px 0;
 			color: white;
 			background-color: black;
 		}
-}
-
-
-.income {
-	.income__body {
-		display: flex;
-		justify-content:space-around;
-		.income__column {
-			flex: 1 1 33.333%;
-			border: 1px solid black;
-			//margin: 2px;
-			&:last-child{
-				margin: 0 -1px;
-			}
-			&:first-child{
-				margin: 0 -1px;
-			}
+		.main__body {
+			flex: 1 1 auto;
+			padding: 0px;
+			display: flex;
 		}
-			.date {}
-			.type {}
-			.summ {}
-	}
+		.main__column {
+			flex: 1 1 33.333%;
+			border-right: 1px solid black;
+			&:last-child{border-right: none;}
+		}
+		.main__row {
+			display: block;
+			text-align: center;
+			padding: 5px 0;
+			font-size: 20px;
+			border: 1px solid #000;
+			margin: -1px;
+		}
+		.main__btn{
+			height: 25px;
+			background-color: #00f0f0;
+			color: black;
+			font-size: 15px;
+			border: 1px solid black;
+			margin: -1px;
+		}
 }
 
-.income__body_row{
-	text-align: center;
-	padding: 5px;
-	font-size: 20px;
-	border: 1px solid #000;
-	margin: -1px;
-}
+.income {}
 
-.btn{
-	height: 25px;
-	background-color: #00fefe;
-	color: black;
-	font-size: 15px;
-	border: 1px solid black;
-	margin: -1px;
-}
+.income__body {}
 
-.expense {
-	.expense__body {}
-}
+.income__column {}
+
+.income__date {}
+
+.income__row {}
+
+.income__btn {}
 
 
-.main_block__body {
-	flex: 1 1 auto;
-	padding: 0px;
-}
+.date__title {}
+
+.type__title {}
+
+.summ__title {}
 
 
+.expense {}
 
+.expense__body {}
 
-
+.expense__btn {}
 
 
 
